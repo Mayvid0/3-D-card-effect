@@ -23,7 +23,7 @@ window.onmousemove =e =>{
     const percent= (mouseCurrDistance/mouseMaxDistance) * (-100) ;
         Math.min(nextPercent,0);
         Math.max(nextPercent,-100);
-        nextPercent = parseFloat(track.dataset.prevPercent) + percent;
+       const nextPercent = parseFloat(track.dataset.prevPercent) + percent;
         
         for(const image of track.getElementsByClassName("image")){
             image.style.objectPosition = `${nextPercent} 50%`;
