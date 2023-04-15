@@ -1,23 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <script src="index.js" defer></script>
-    <title>tutwebsite</title>
-</head>
-<body>
-    <div id="image-track" data-mouse-down-at="0" data-prev-percent="0">
-        <img class="image" src="https://source.unsplash.com/SYTO3xs06fU" alt="img" draggable="false">
-        <img class="image" src="https://source.unsplash.com/E3I9thV98kQ" alt="img" draggable="false">
-        <img class="image" src="https://source.unsplash.com/m_HRfLhgABo" alt="img" draggable="false">
-        <img class="image" src="https://source.unsplash.com/cckf4TsHAuw" alt="img" draggable="false">
-        <img class="image" src="https://source.unsplash.com/vZJdYl5JVXY" alt="img" draggable="false">
-        <img class="image" src="https://source.unsplash.com/Bs-zngH79Ds" alt="img" draggable="false">
-        <img class="image" src="https://source.unsplash.com/_aXa21cf7rY" alt="img" draggable="false">
-    </div>
-</body>
+    <script src="vanilla-tilt.js" defer></script>
 
+    <title>tutwebsite</title>
+  </head>
+  <body>
+    <div
+      id="image-track"
+      data-mouse-down-at="0"
+      data-prev-percent="0"
+      data-tilt-scale="1.05"
+    >
+      <img
+        id="img"
+        class="image"
+        src="https://source.unsplash.com/SYTO3xs06fU"
+        alt="img"
+        draggable="false"
+        data-tilt
+        data-tilt-scale="1.05"
+        data-tilt-glare
+        data-tilt-max-glare="0.8"
+      />
+      <img
+        class="image"
+        src="https://source.unsplash.com/E3I9thV98kQ"
+        alt="img"
+        data-tilt
+        data-tilt-scale="1.05"
+        data-tilt-glare
+        data-tilt-max-glare="0.8"
+        draggable="false"
+      />
+      <img
+        class="image"
+        src="https://source.unsplash.com/m_HRfLhgABo"
+        alt="img"
+        data-tilt
+        data-tilt-scale="1.05"
+        data-tilt-glare
+        data-tilt-max-glare="0.8"
+        draggable="false"
+      />
+      <img
+        class="image"
+        src="https://source.unsplash.com/cckf4TsHAuw"
+        alt="img"
+        data-tilt
+        data-tilt-scale="1.05"
+        data-tilt-glare
+        data-tilt-max-glare="0.8"
+        draggable="false"
+      />
+      <img
+        class="image"
+        src="https://source.unsplash.com/vZJdYl5JVXY"
+        alt="img"
+        data-tilt
+        data-tilt-scale="1.05"
+        data-tilt-glare
+        data-tilt-max-glare="0.8"
+        draggable="false"
+      />
+      <img
+        class="image"
+        src="https://source.unsplash.com/hGV2TfOh0ns"
+        alt="img"
+        data-tilt
+        data-tilt-scale="1.05"
+        data-tilt-glare
+        data-tilt-max-glare="0.8"
+        draggable="false"
+      />
+      <img
+        class="image"
+        src="https://source.unsplash.com/_aXa21cf7rY"
+        alt="img"
+        data-tilt
+        data-tilt-scale="1.05"
+        data-tilt-glare
+        data-tilt-max-glare="0.8"
+        draggable="false"
+      />
+    </div>
+    <!-- <img
+        id="img"
+        class="image"
+        src="https://source.unsplash.com/SYTO3xs06fU"
+        alt="img"
+        data-tilt
+        data-tilt-scale="1.05"
+        data-tilt-glare
+        data-tilt-max-glare="0.8"
+        height="200px"
+        width="300px"
+      /> -->
+    <!-- <script type="text/javascript">
+      VanillaTilt.init(document.querySelector("#img"), {
+        max: 25,
+        speed: 400,
+      });
+    </script> -->
+  </body>
 </html>

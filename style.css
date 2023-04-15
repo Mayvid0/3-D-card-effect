@@ -5,12 +5,14 @@ body{
     overflow: hidden;
     margin: 0rem;
 }
+#image-traclk{
+    transform-style: preserve-3d;
+}
 
 #image-track > .image{
     width: 40vmin;
     height: 56vmin;
     object-fit: cover;
-    object-position: center center;
 }
 #image-track{
     display: flex;
@@ -20,3 +22,7 @@ body{
     top: 50%;
     transform: translateY(-50%);
 }
+/* .image1:hover{
+    height: 65vmin;
+    width: 46vmin;
+} */
