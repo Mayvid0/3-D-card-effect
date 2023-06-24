@@ -5,10 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
     <script src="index.js" defer></script>
     <script src="vanilla-tilt.js" defer></script>
 
-    <title>tutwebsite</title>
+    <title>tutwebsite</title><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <body>
     <div
@@ -19,17 +20,19 @@
     >
       <img
         id="img"
-        class="image"
+        class="image interactable"
+        data-type="link"
         src="https://source.unsplash.com/random/?city,day"
         alt="img"
         draggable="false"
         data-tilt
         data-tilt-scale="1.1"
         data-tilt-glare
-        data-tilt-max-glare="0.8"
+        data-tilt-max-glare="0.8"data-type="link"
       />
       <img
-        class="image"
+        class="image interactable"
+        data-type="video"
         src="https://source.unsplash.com/random/?city,night"
         alt="img"
         data-tilt
@@ -39,7 +42,8 @@
         draggable="false"
       />
       <img
-        class="image"
+        class="image interactable"
+        data-type="link"
         src="https://source.unsplash.com/random/?nature,day"
         alt="img"
         data-tilt
@@ -49,7 +53,8 @@
         draggable="false"
       />
       <img
-        class="image"
+        class="image interactable"
+        data-type="video"
         src="https://source.unsplash.com/random/?sea"
         alt="img"
         data-tilt
@@ -59,7 +64,8 @@
         draggable="false"
       />
       <img
-        class="image"
+        class="image interactable"
+        data-type="video"
         src="https://source.unsplash.com/random/?mountains"
         alt="img"
         data-tilt
@@ -69,7 +75,8 @@
         draggable="false"
       />
       <img
-        class="image"
+        class="image interactable"
+        data-type="link"
         src="https://source.unsplash.com/random/?village"
         alt="img"
         data-tilt
@@ -79,7 +86,8 @@
         draggable="false"
       />
       <img
-        class="image"
+        class="image interactable"
+        data-type="video"
         src="https://source.unsplash.com/random/?desert"
         alt="img"
         data-tilt
@@ -90,7 +98,7 @@
       />
     </div>
     <div id="trailer">
-        
+        <i id="trailer-icon" class="fa-solid fa-play fa-arrow-right"></i>
     </div>
   </body>
 </html>

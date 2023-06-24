@@ -2,42 +2,69 @@ const track = document.getElementById("image-track"); //to know the current posi
 const trailer=document.getElementById("trailer");
 
 //invisible slider
-window.onmousedown = (e) => {
+window.addEventListener("mousedown", (e) => {
   track.dataset.mouseDownAt = e.clientX;
-};
+});
 
-window.onmouseup = () => {
+window.addEventListener("mouseup", () => {
   track.dataset.mouseDownAt = "0";
   track.dataset.prevPercent = track.dataset.percent;
-};
+});
 
-window.onmousemove = (e) => {
+const getTrailerClass= type =>{
+    switch(type){
+        case "video":
+            return "fa-solid fa-play";
+        default:
+            return "fa-solid fa-arrow-right";
 
-  //mouse movement effect
-  const x= e.clientX -trailer.offsetWidth/2,
-        y= e.clientY - trailer.offsetHeight/2;
+    }
+}
 
-  const keyframes ={
-    transform :`translate(${x}px ,${y}px)`
-  }
-  trailer.animate(keyframes,{
-      duration : 800 ,fill:"forwards" //retains the state after animation
-  });
+const animateTrailer = (e,interacting) =>{
+     let x= e.clientX -trailer.offsetWidth/2,
+         y= e.clientY - trailer.offsetHeight/2;
+    
+    let keyframes ={
+      transform :`translate(${x}px ,${y}px)  scale(${interacting ? 5 : 1})` 
+    }
+    trailer.animate(keyframes,{
+        duration : 800 ,fill:"forwards" //retains the state after animation
+    });
+    
+}
 
+window.addEventListener("mousemove", (e) =>{
 
-  
+    const interactable = e.target.closest(".interactable"),
+          interacting = interactable !==null;
+
+    let icon = document.getElementById("trailer-icon");
+     animateTrailer(e,interacting);
+
+    trailer.dataset.type= interacting? interactable.dataset.type : "";
+
+    if(interacting){
+        icon.className= getTrailerClass(interactable.dataset.type);
+    }
 
   if (track.dataset.mouseDownAt === "0") return;
 
-  const mouseCurrDistance = parseFloat(track.dataset.mouseDownAt) - e.clientX,
-    mouseMaxDistance = window.innerWidth / 2;
+  let mouseCurrDistance = parseFloat(track.dataset.mouseDownAt) - e.clientX;
+   const mouseMaxDistance = window.innerWidth / 2;
 
-  const percent = -1 * (mouseCurrDistance / mouseMaxDistance) * 100;
+  let percent =  (mouseCurrDistance / mouseMaxDistance) * -100;
 
-  const nextPercent = parseFloat(track.dataset.prevPercent) + percent;
+  let nextPercent = parseFloat(track.dataset.prevPercent) + percent;
+    nextPercent = Math.min(Math.max(nextPercent,-110),10);
 
   for (const image of track.getElementsByClassName("image")) {
-    image.style.objectPosition = `${nextPercent + 100}% 50%`;
+    image.animate(
+        {
+          objectPosition: `${nextPercent + 100}% center`,
+        },
+        { duration: 1200, fill: "forwards" }
+      );
   }
 
   track.dataset.percent = nextPercent;
@@ -49,14 +76,7 @@ window.onmousemove = (e) => {
     { duration: 1200, fill: "forwards" }
   );
 
-  image.animate(
-    {
-      objectPosition: `${nextPercent + 100}% center`,
-    },
-    { duration: 1200, fill: "forwards" }
-  );
-};
-
+});
 
 
 
