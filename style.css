@@ -40,6 +40,7 @@ body:hover > #trailer {
   pointer-events: none;
   opacity: 0;
   transition: opacity 500ms ease;
+  caret-color:transparent;
 }
 #trailer:not([data-type=""]) > #trailer-icon {
   opacity: 1;
