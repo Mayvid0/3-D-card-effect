@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    caret-color: transparent;
 }
 
 body{
@@ -16,7 +17,7 @@ body{
 
 .container{
     /* background-color: lightblue; */
-    width: 90%;
+    width: 80%;
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -25,7 +26,7 @@ body{
 
 .card{
     transform-style: preserve-3d;
-    min-height: 70vh;
+    min-height: 50vh;
     width: 25rem;
     /* background-color: lightcoral; */
     border-radius:30px ;

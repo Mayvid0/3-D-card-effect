@@ -5,11 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <!-- <link rel="stylesheet" href="modal.css"> -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <script src="index.js" defer></script>
+    <script src="effect.js" defer></script>
     <script src="vanilla-tilt.js" defer></script>
 
     <title>tutwebsite</title>
@@ -24,13 +26,14 @@
       id="image-track"
       data-mouse-down-at="0"
       data-prev-percent="0"
-      data-tilt-scale="1.05"
+       data-tilt-scale="1.05" 
     >
       <img
         id="img"
         class="image interactable"
         data-type="link"
-        src="https://source.unsplash.com/random/?city,day"
+        src="images/1.png"
+        onclick="openModal('images/airdopes-181-removebg.png')"
         alt="img"
         draggable="false"
         data-tilt
@@ -42,7 +45,8 @@
       <img
         class="image interactable"
         data-type="video"
-        src="https://source.unsplash.com/random/?city,night"
+        src="images/2.png"
+        onclick="openModal('images/rockerz-235-V2-removebg-preview.png')"
         alt="img"
         data-tilt
         data-tilt-scale="1.1"
@@ -53,7 +57,8 @@
       <img
         class="image interactable"
         data-type="link"
-        src="https://source.unsplash.com/random/?nature,day"
+        src="images/3.png"
+        onclick="openModal('images/rockerz-410-black_1500x-removebg-preview.png')"
         alt="img"
         data-tilt
         data-tilt-scale="1.1"
@@ -64,7 +69,8 @@
       <img
         class="image interactable"
         data-type="video"
-        src="https://source.unsplash.com/random/?sea"
+        src="images/4.png"
+        onclick="openModal('images/rockerz-410-black_1500x-removebg-preview.png')"
         alt="img"
         data-tilt
         data-tilt-scale="1.1"
@@ -75,7 +81,8 @@
       <img
         class="image interactable"
         data-type="video"
-        src="https://source.unsplash.com/random/?mountains"
+        src="images/5.png"
+        onclick="openModal('images/rockerz-558-batman-edition__1_-removebg-preview.png')"
         alt="img"
         data-tilt
         data-tilt-scale="1.1"
@@ -86,7 +93,8 @@
       <img
         class="image interactable"
         data-type="link"
-        src="https://source.unsplash.com/random/?village"
+        src="images/1.png"
+        onclick="openModal('images/airdopes-181-removebg.png')"
         alt="img"
         data-tilt
         data-tilt-scale="1.1"
@@ -97,7 +105,8 @@
       <img
         class="image interactable"
         data-type="video"
-        src="https://source.unsplash.com/random/?desert"
+        src="images/4.png"
+        onclick="openModal('images/airdopes-181-removebg.png')"
         alt="img"
         data-tilt
         data-tilt-scale="1.1"
@@ -106,6 +115,7 @@
         draggable="false"
       />
     </div>
+
     <div id="trailer">
       <i id="trailer-icon" class="" />
     </div>

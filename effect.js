@@ -14,9 +14,19 @@ container.addEventListener('mouseenter',(e)=>{
     img.style.transform='translateZ(150px) '
 })
 container.addEventListener('mouseleave',(e)=>{
-    card.style.transition='all 0.5 ease';
+    card.style.transition='all 0.1 ease-in-out';
 })
 
 container.addEventListener('mouseleave',(e)=>{
     card.style.transform=`rotateY(0deg) rotateX(0deg)`;
 })
+
+
+
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
+const imageUrl = urlParams.get('imageUrl');
+
+// Display the clicked image on the page
+const displayedImage = document.getElementById('displayed-image');
+displayedImage.src = imageUrl;
