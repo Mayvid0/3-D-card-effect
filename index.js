@@ -14,9 +14,9 @@ window.addEventListener("mouseup", () => {
 const getTrailerClass= type =>{
     switch(type){
         case "video":
-            return "fa-solid fa-play";
+            return "fa fa-play center";
         default:
-            return "fa-solid fa-arrow-right";
+            return "fa fa-arrow-right center";
 
     }
 }
@@ -26,7 +26,7 @@ const animateTrailer = (e,interacting) =>{
          y= e.clientY - trailer.offsetHeight/2;
     
     let keyframes ={
-      transform :`translate(${x}px ,${y}px)  scale(${interacting ? 5 : 1})` 
+      transform :`translate(${x}px ,${y}px)  scale(${interacting ? 4 : 1})` 
     }
     trailer.animate(keyframes,{
         duration : 800 ,fill:"forwards" //retains the state after animation
