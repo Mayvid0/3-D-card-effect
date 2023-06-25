@@ -13,8 +13,6 @@ window.addEventListener("mouseup", () => {
 
 const getTrailerClass= type =>{
     switch(type){
-        case "video":
-            return "fa fa-play center";
         default:
             return "fa fa-arrow-right center";
 

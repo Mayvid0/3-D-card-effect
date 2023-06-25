@@ -5,7 +5,11 @@ body {
   overflow: hidden;
   margin: 0rem;
 }
-#image-traclk {
+
+body{
+  font-family: "Poppins", sans-serif;
+}
+#image-track {
   transform-style: preserve-3d;
 }
 
@@ -48,11 +52,12 @@ body:hover > #trailer {
   opacity: 0;
   transition: opacity 400ms ease;
   font-size: 8px;
+  transform: rotate(-45deg);
 }
 
 .center {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-40%, -40%);
+  top: 37%;
+  left: 35%;
+  /* transform: translate(-60%, -30%); */
 }
