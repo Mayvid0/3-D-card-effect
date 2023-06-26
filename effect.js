@@ -2,6 +2,8 @@ const card = document.querySelector('.card');
 const container = document.querySelector('.container');
 const info = document.querySelector('.info')
 const img = document.querySelector('.headphone')
+const title= document.querySelector('.title')
+const cost = document.querySelector('.cost')
 
 container.addEventListener('mousemove',(e)=>{
     let xAxis= (window.innerWidth/2 - e.pageX)/15;
@@ -26,7 +28,11 @@ container.addEventListener('mouseleave',(e)=>{
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 const imageUrl = urlParams.get('imageUrl');
+const name = urlParams.get('name');
+const cos= urlParams.get('cost')
 
 // Display the clicked image on the page
 const displayedImage = document.getElementById('displayed-image');
 displayedImage.src = imageUrl;
+title.textContent= name;
+cost.textContent= cos;

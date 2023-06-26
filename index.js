@@ -76,8 +76,8 @@ window.addEventListener("mousemove", (e) =>{
 
 });
 
-function openModal(imageUrl) {
-  window.location.href = `card.html?imageUrl=${encodeURIComponent(imageUrl)}`;
+function openModal(imageUrl,name,cost) {
+  window.location.href = `card.html?imageUrl=${encodeURIComponent(imageUrl)}&name=${name}&cost=${cost}`;
 }
 
 

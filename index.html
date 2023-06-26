@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="3-d card effect using plain vanilla js and tilt js">
     <link rel="stylesheet" href="style.css" />
-    <!-- <link rel="stylesheet" href="modal.css"> -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -14,7 +14,7 @@
     <script src="effect.js" defer></script>
     <script src="vanilla-tilt.js" defer></script>
 
-    <title>tutwebsite</title>
+    <title>card-list</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -33,7 +33,7 @@
         class="image interactable"
         data-type="link"
         src="images/1.png"
-        onclick="openModal('images/airdopes-181-removebg.png')"
+        onclick="openModal('images/airdopes-181-removebg.png','Airdopes-181','$500')"
         alt="img"
         draggable="false"
         data-tilt
@@ -46,7 +46,7 @@
         class="image interactable"
         data-type="video"
         src="images/2.png"
-        onclick="openModal('images/rockerz-235-V2-removebg-preview.png')"
+        onclick="openModal('images/rockerz-235-V2-removebg-preview.png','Rockerz-235-V2','$150')"
         alt="img"
         data-tilt
         data-tilt-scale="1.1"
@@ -58,7 +58,7 @@
         class="image interactable"
         data-type="link"
         src="images/3.png"
-        onclick="openModal('images/rockerz-410-black_1500x-removebg-preview.png')"
+        onclick="openModal('images/rockerz-558-removebg-preview.png','Rockerz-558','$300')"
         alt="img"
         data-tilt
         data-tilt-scale="1.1"
@@ -70,7 +70,7 @@
         class="image interactable"
         data-type="video"
         src="images/4.png"
-        onclick="openModal('images/rockerz-410-black_1500x-removebg-preview.png')"
+        onclick="openModal('images/rockerz-410-black_1500x-removebg-preview.png','Rockerz-410-black','$300')"
         alt="img"
         data-tilt
         data-tilt-scale="1.1"
@@ -82,7 +82,7 @@
         class="image interactable"
         data-type="video"
         src="images/5.png"
-        onclick="openModal('images/rockerz-558-batman-edition__1_-removebg-preview.png')"
+        onclick="openModal('images/rockerz-558-batman-edition__1_-removebg-preview.png','ROckerz-55-batman-edition','$600')"
         alt="img"
         data-tilt
         data-tilt-scale="1.1"
@@ -93,8 +93,8 @@
       <img
         class="image interactable"
         data-type="link"
-        src="images/1.png"
-        onclick="openModal('images/airdopes-181-removebg.png')"
+        src="images/6.png"
+        onclick="openModal('images/rockerz-245-removebg-preview.png','Rockerz-245','$100')"
         alt="img"
         data-tilt
         data-tilt-scale="1.1"
@@ -105,8 +105,8 @@
       <img
         class="image interactable"
         data-type="video"
-        src="images/4.png"
-        onclick="openModal('images/airdopes-181-removebg.png')"
+        src="images/7.png"
+        onclick="openModal('images/rockerz-510-removebg-preview.png','Rockerz-510','$375')"
         alt="img"
         data-tilt
         data-tilt-scale="1.1"
@@ -117,7 +117,7 @@
     </div>
 
     <div id="trailer">
-      <i id="trailer-icon" class="" />
+      <i id="trailer-icon" class="" >
     </div>
   </body>
 </html>
